@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* CORES */
 
 :root{
@@ -42,7 +44,7 @@
     --montanha-cor-texto: #000000;
     --montanha-cor-barra-progresso-vazia: #787e8c;
 
-    
+    --fonte:"Cinzel", serif;
 }
 
 
@@ -51,13 +53,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(/Trabalho-Final-DW1/imagensfundo/pexels-taryn-elliott-4840134.jpg);
+    background-size: cover;
+}
 
 .container{
     display: flex;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: darksalmon;
+    /* background-color: darksalmon; */
 }
 
 /* DROPDOWN-BOX  E SELECT DE TEMAS*/
@@ -90,18 +96,59 @@
 
 .titulo{
     font-size: xx-large;
+    color:#d6c4a6;
+    font-family: var(--fonte);
+    text-shadow:0 0 15px #a38159;
     
-
+    
     /* border: 1px solid black; */
 }
 
+/* Caixa onde fica o input e os outros itens */
 .caixa{
-
+    
     display: flex;
     height: 100px;
     width: auto;
-    background-color: aqua;
+    background-color:#1b3d2f;
     justify-content: center;
+    padding:3px;
+    
+    
+}
 
+/* área dentro da caixa que fica o botão e o input */
+.adicionar-item{
+    display: flex;
+    align-items: center ;
+    gap: 30px;
+}
+
+/* butao */
+.caixa button{
+    height: 40px;
+    width: 60px;
+    font-size: x-large;
+    cursor: pointer;
+    color:#a38159;
+    background-color: #546b4e;
+    border:1px transparent black;
+    outline: none;
+    box-shadow: none;
+    border-radius: 10%;
+}
+
+/* input */
+.caixa input{
+    height: 40px;
+    width: 400px;
+    background-color:#2e5339;
+    outline: none;
+    box-shadow: none;
+    color: #a38159;
+    border-radius: 5%;
+    border: 1px solid black;
+    font-size: large;
+    font-family: "Cinzel", serif;;
 }
 
