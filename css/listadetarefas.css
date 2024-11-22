@@ -1,3 +1,51 @@
+/* CORES */
+
+:root{
+    --floresta-cor-caixa: #1b3d2f;
+    --floresta-cor-input: #2e5339;
+    --floresta-cor-itens-lista: #3c6644;
+    --floresta-cor-botao-adicionar: #546b4e;
+    --floresta-cor-botoes-lista: #a38159;
+    --floresta-cor-texto: #d6c4a6;
+    --floresta-cor-barra-progresso-vazia: #898a87;
+    --floresta-cor-barra-progresso-cheia: ;
+
+    --gelo-cor-caixa: #4895ab;
+    --gelo-cor-input: #346f87;
+    --gelo-cor-itens-lista: #7cb9c8;
+    --gelo-cor-botao-adicionar: #2b4b5e;
+    --gelo-cor-botoes-lista: #205a7c;
+    --gelo-cor-texto: #24292d;
+    --gelo-cor-barra-progresso-vazia: #a5cbd5;
+
+    --terra-cor-caixa: ;
+    --terra-cor-input: ;
+    --terra-cor-itens-lista: ;
+    --terra-cor-botao-adicionar: ;
+    --terra-cor-botoes-lista: ;
+    --terra-cor-texto: ;
+    --terra-cor-barra-progresso-vazia: ;
+
+    --lava-cor-caixa: #330d0f;
+    --lava-cor-input: #460d0c;
+    --lava-cor-itens-lista: #2f0d0f;
+    --lava-cor-botao-adicionar: #72110b;
+    --lava-cor-botoes-lista: #8c1811;
+    --lava-cor-texto: #fab86b;
+    --lava-cor-barra-progresso-vazia: #8c5c54;
+
+    --montanha-cor-caixa: #2c2b34;
+    --montanha-cor-input: #898a87;
+    --montanha-cor-itens-lista: #7f8394;
+    --montanha-cor-botao-adicionar: #595f68;
+    --montanha-cor-botoes-lista: #abb4b8;
+    --montanha-cor-texto: #000000;
+    --montanha-cor-barra-progresso-vazia: #787e8c;
+
+    
+}
+
+
 *{
     padding: 0;
     margin: 0;
@@ -6,29 +54,29 @@
 
 .container{
     display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: darksalmon;
 }
 
-/* DROPDOWN-BOX */
+/* DROPDOWN-BOX  E SELECT DE TEMAS*/
 
 .dropdown-box{
     position: relative;
     display: inline-block;
+    padding: 1.25rem;
 }
 
-.dropdown-item{
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
 
-.dropdown-item button{
+#select{
     color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    background-color: beige;
+    width: 9rem;
+    height: 1.5rem;
+    border-radius: 0.7rem;
+
+    background-color: rgb(176, 176, 176);
 }
 
 .dropdown-box:hover .dropdown-item{
