@@ -54,7 +54,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(/Trabalho-Final-DW1/imagensfundo/pexels-taryn-elliott-4840134.jpg);
+    background-image: url(../imagensfundo/pexels-taryn-elliott-4840134.jpg);
     background-size: cover;
 }
 
@@ -71,7 +71,7 @@ body{
 .dropdown-box{
     position: relative;
     display: inline-block;
-    padding: 1.25rem;
+    padding: 2rem;
 }
 
 
@@ -91,44 +91,66 @@ body{
     display: flex;
     justify-content: center ;
     /* background-color: #4CAF50; */
-    margin-top: 100px;
+    /* margin-top: 6.25rem; */
+    height: 100%;
+    width: 100%;
 }
 
 .titulo{
-    font-size: xx-large;
+    /* font-size: 100%; */
+    height: 15%;
     color:#d6c4a6;
     font-family: var(--fonte);
-    text-shadow:0 0 15px #a38159;
-    
-    
+    text-shadow:0 0 .9375rem #a38159;
+    display: flex;
+    flex-direction: column;
     /* border: 1px solid black; */
 }
 
+.titulo h1{
+    font-size: 200%;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
+.container-caixa-titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+}
+
 /* Caixa onde fica o input e os outros itens */
+
 .caixa{
     
     display: flex;
-    height: 100px;
-    width: auto;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
     background-color:#1b3d2f;
     justify-content: center;
-    padding:3px;
-    
+    padding: .1875rem;
+    border-radius: .9375rem;
     
 }
 
 /* área dentro da caixa que fica o botão e o input */
 .adicionar-item{
     display: flex;
-    align-items: center ;
-    gap: 30px;
+    
+    gap: 1.875rem;
+    width: auto;
+    height: auto;
 }
 
-/* butao */
+/* botao */
 .caixa button{
-    height: 40px;
-    width: 60px;
-    font-size: x-large;
+    height: 2.5rem;
+    width: 10%;
+    font-size: 150%;
     cursor: pointer;
     color:#a38159;
     background-color: #546b4e;
@@ -138,10 +160,15 @@ body{
     border-radius: 10%;
 }
 
+.caixa .bi{
+    height: 100%;
+    width: 100%;
+}
+
 /* input */
 .caixa input{
-    height: 40px;
-    width: 400px;
+    height: 2.5rem;
+    width: 90%;
     background-color:#2e5339;
     outline: none;
     box-shadow: none;
@@ -152,3 +179,13 @@ body{
     font-family: "Cinzel", serif;;
 }
 
+
+.lista-itens{
+    height: auto;
+    width: 100%;
+}
+
+.progresso{
+    height: auto;
+    width: 100%;
+}
