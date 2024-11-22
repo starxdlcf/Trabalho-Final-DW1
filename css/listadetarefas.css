@@ -124,6 +124,9 @@ body{
 
 /* Caixa onde fica o input e os outros itens */
 
+/* ta vendo que a nossa caixa ta com uma testa absurda? se tiramos o display flex dela ela fica do jeito que queremos */
+
+/* correção, coloquei a altura como auto e deu certo  até que da certo, ai só teriamos que trabalhar com gaps entre uma coisa e outra, até pq o tamanho da caixa muda conforme as tarefas que nela há*/
 .caixa{
     
     display: flex;
@@ -135,15 +138,18 @@ body{
     padding: .1875rem;
     border-radius: .9375rem;
     
+
+    
 }
 
 /* área dentro da caixa que fica o botão e o input */
 .adicionar-item{
     display: flex;
-    
     gap: 1.875rem;
     width: auto;
     height: auto;
+    background-color: wheat;
+    
 }
 
 /* botao */
@@ -183,9 +189,11 @@ body{
 .lista-itens{
     height: auto;
     width: 100%;
+    background-color: red;
 }
 
 .progresso{
     height: auto;
     width: 100%;
+    background-color: blue;
 }
