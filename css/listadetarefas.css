@@ -53,3 +53,23 @@
     height: 2.5rem;
     background-color: violet;
 }
+.container-caixa-titulo{
+    /* background-color: #4CAF50; */
+    width: 100vw;
+    margin-top: 100px;
+    
+
+}
+
+.titulo{
+    font-size: xx-large;
+
+    /* border: 1px solid black; */
+}
+
+.caixa{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+
+}
