@@ -79,37 +79,13 @@
     background-color: rgb(176, 176, 176);
 }
 
-.dropdown-box:hover .dropdown-item{
-    display: block;
-}
+/* DIV PRINCIPAL */
 
-.dropdown-box:hover .dropdown-btn{
-    background-color: #3e8e41;
-}
-
-.dropdown-btn{
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.btn{
-    width: 5rem;
-    height: 2.5rem;
-    background-color: violet;
-}
 .principal{
     display: flex;
     justify-content: center ;
     /* background-color: #4CAF50; */
     margin-top: 100px;
-    
-    
-    
-
 }
 
 .titulo{
