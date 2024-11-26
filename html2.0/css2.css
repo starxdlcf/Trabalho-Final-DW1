@@ -24,6 +24,7 @@
 body{
     background-image: url(../imagensfundo/pexels-taryn-elliott-4840134.jpg);
     background-size: cover;
+    /* background-repeat: no-repeat; */
     
 }
 
@@ -45,20 +46,31 @@ body{
 }
 
 h1{
-    text-align: center;
+    /* text-align: center; */
     color: wheat;
     text-shadow:0px 0px .3125rem #a38159;
 }
 .container{
     display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
 }
 .box{
     background-color:var(--floresta-cor-caixa);
-    padding: 0.625rem;
+    padding: 1.625rem;
     border-radius: .3125rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 30%; */
+}
+
+.topo-box{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 2%; */
 }
 
 .selecionar{
@@ -67,9 +79,10 @@ h1{
     outline: none;
     box-shadow: 0rem .25rem .3125rem black;
     border-radius: .1875rem;
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem; */
     background-color: var(--floresta-cor-input);
     border: 1px solid black;
+    margin-right: 100px;
 
 }
 
@@ -78,10 +91,10 @@ h1{
     padding: .1875rem;
     width: 3rem;
     border-radius: .1875rem;
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem; */
     background-color: var(--floresta-cor-botao-adicionar);
     color: var(--floresta-cor-botoes-lista);
-    box-shadow: 0rem .25rem .3125rem black;
+        box-shadow: 0rem .25rem .3125rem black;
 }
 
 .box li{
@@ -94,6 +107,10 @@ h1{
     font-size: x-large;
     padding: .625rem;
     box-shadow: 0rem .25rem .625rem rgb(0, 0, 0);
+}
+
+.box ul{
+    margin-top: 3.125rem;
 }
 
 .box li .check{
