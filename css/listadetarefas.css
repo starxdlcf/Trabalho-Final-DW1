@@ -148,7 +148,7 @@ body{
     gap: 1.875rem;
     width: auto;
     height: auto;
-    background-color: wheat;
+    /* background-color: wheat; */
     
 }
 
@@ -160,10 +160,10 @@ body{
     cursor: pointer;
     color:#a38159;
     background-color: #546b4e;
-    border:1px transparent black;
+    /* border:1px solid black; */
     outline: none;
     box-shadow: none;
-    border-radius: 10%;
+    border-radius: 0.31rem;
 }
 
 .caixa .bi{
@@ -179,7 +179,7 @@ body{
     outline: none;
     box-shadow: none;
     color: #a38159;
-    border-radius: 5%;
+    border-radius: 0.31rem;
     border: 1px solid black;
     font-size: large;
     font-family: "Cinzel", serif;;

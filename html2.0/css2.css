@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --fonte:"Cinzel", serif;
+    --floresta-cor-caixa: #1b3d2f;
+    --floresta-cor-input: #2e5339;
+    --floresta-cor-itens-lista: #3c6644;
+    --floresta-cor-botao-adicionar: #546b4e;
+    --floresta-cor-botoes-lista: #a38159;
+    --floresta-cor-texto: #d6c4a6;
+    --floresta-cor-barra-progresso-vazia: #898a87;
+    --floresta-cor-barra-progresso-cheia: ;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--fonte);
+}
+
+body{
+    background-image: url(../imagensfundo/pexels-taryn-elliott-4840134.jpg);
+    background-size: cover;
+    
+}
+
+/* fazer a caixinha de opções de temas */
+.dropdown-box{
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+}
+
+
+#select{
+    color: black;
+    background-color: beige;
+    width: 9rem;
+    height: 1.5rem;
+    border-radius: 0.7rem;
+    background-color: rgb(176, 176, 176);
+}
+
+h1{
+    text-align: center;
+    color: wheat;
+    text-shadow:0px 0px .3125rem #a38159;
+}
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+
+}
+.box{
+    background-color:var(--floresta-cor-caixa);
+    padding: 0.625rem;
+    border-radius: .3125rem;
+}
+
+.selecionar{
+    font-size: x-large;
+    padding: .1875rem;
+    outline: none;
+    box-shadow: 0rem .25rem .3125rem black;
+    border-radius: .1875rem;
+    margin-bottom: 1.25rem;
+    background-color: var(--floresta-cor-input);
+    border: 1px solid black;
+
+}
+
+.botao{
+    font-size: x-large;
+    padding: .1875rem;
+    width: 3rem;
+    border-radius: .1875rem;
+    margin-bottom: 1.25rem;
+    background-color: var(--floresta-cor-botao-adicionar);
+    color: var(--floresta-cor-botoes-lista);
+    box-shadow: 0rem .25rem .3125rem black;
+}
+
+.box li{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 1.25rem;
+    background-color: aliceblue;
+    padding: .3125rem;
+    font-size: x-large;
+    padding: .625rem;
+    box-shadow: 0rem .25rem .625rem rgb(0, 0, 0);
+}
+
+.box li .check{
+    width: 2.5rem;
+    font-size: x-large;
+}
+
+.box li .icons{
+    opacity: 0;
+}
+
+.box li:hover .icons{
+    opacity: 1;
+}
+
+
