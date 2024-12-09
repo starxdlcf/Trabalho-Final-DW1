@@ -55,7 +55,13 @@ h1{
     flex-direction: column;
     align-items: center;
 
+
 }
+
+div.box{
+    width: 45%;
+}
+
 .box{
     background-color:var(--floresta-cor-caixa);
     padding: 1.625rem;
@@ -63,23 +69,28 @@ h1{
     margin-left: auto;
     margin-right: auto;
     width: 45%;
+    /* scroll-behavior: smooth; */
+    /* border: 1px solid black; */
+    box-shadow: 0rem .25rem .3125rem black;
 }
 
 .topo-box{
     /* background-color: aqua; */
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
 .selecionar{
-    font-size: x-large;
+    font-size: auto;
     padding: .1875rem;
     outline: none;
     box-shadow: 0rem .25rem .3125rem black;
-    border-radius: .1875rem;
-    /* margin-bottom: 1.25rem; */
+    border-radius: .375rem;
+    /* margin-bottom: 1
+    .25rem; */
     background-color: var(--floresta-cor-input);
     border: 1px solid black;
     /* margin-right: 100px; */
@@ -94,7 +105,7 @@ h1{
     font-size: x-large;
     padding: .1875rem;
     width: 15%;
-    border-radius: .1875rem;
+    border-radius: .375rem;
     /* margin-bottom: 1.25rem; */
     background-color: var(--floresta-cor-botao-adicionar);
     color: var(--floresta-cor-botoes-lista);
@@ -122,7 +133,7 @@ h1{
     padding: .625rem;
     box-shadow: 0rem .25rem .625rem rgb(0, 0, 0);
     width: 100%;
-
+    border-radius:.375rem ;
 }
 
 .box ul{
@@ -140,6 +151,9 @@ h1{
 }
 .lista-box button{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -165,8 +179,136 @@ h1{
     height: 100%;
     align-items: center;
     /* background-color: #1b3d2f; */
-    
-    
 
 }
 
+.feito {
+    background-color: #1b3d2f;
+    text-decoration: line-through;
+}
+
+.edit-input{
+    display: flex;
+    font-size: x-large;
+    outline: none;
+    border: none;
+    width:100%;
+
+}
+
+
+.barra-progresso{
+    width: 100%;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    text-overflow:clip;
+    margin: 10px 0;
+}
+
+.progresso{
+    height: 100%;
+    width:0;
+    background-color:#898a87;
+    border-radius: .625rem;
+
+}
+
+#progresso-texto{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bolder;
+    color: #f3f3f3;
+}
+
+
+.contato-box{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    height: 600px;
+    width: 1200px;
+    background-color: rgb(145, 177, 177);
+    padding: .25rem;
+    gap: 10px;
+    
+
+}
+.contato-box h1{
+    text-align: center;
+}
+
+.contato-box .contato{
+    display: flex;
+    background-color: #1b3d2f;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    /* margin-top: 10px; */
+}
+
+.contato .foto-place{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+    height: 100%;
+    width: 20%;
+
+}
+
+.foto-place .fotomateus{
+    height: 4.6875rem;
+    width: 4.6875rem;
+    background-image: url(/Trabalho-Final-DW1/imagensfundo/89a97461-87dd-43e5-97e7-b51997da12c7\ \(1\).jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+}
+.foto-place .fotoanna{
+    height: 4.6875rem;
+    width: 4.6875rem;
+    background-image: url(../imagensfundo/ffa2eab0-a467-440e-bfcb-fe3a9d116a28.jpeg);
+    background-position: center;
+    background-size:cover;
+    border-radius: 100%;
+}
+
+.contato .infos{
+    font-size: .9375rem;
+    /* padding: .1875rem; */
+    height: 100%;
+    width: 60%;
+    background-color: bisque;
+
+}
+
+.contato .redes{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes .bi{
+    display:flex;
+    justify-content: space-around;
+    color: #f3f3f3;
+    font-size: 3rem;
+}
+
+.fechar{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    right:0;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
