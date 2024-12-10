@@ -15,14 +15,14 @@
 
         <!-- isso é uma caixinha p mudar os temas mateus, peguei na internet a base e precisa fazer o css ainda p ajustar ela e o javascript p colocar o onclick e tal... é uma dropdown box, q é uma caixinha tipo select -->
 
-        <select name="" id="select">
-            <option value="">Selecionar Tema</option>
-
+        <select oninput="backgroundChange()" name="" id="select">
+            <option value="selecionar">Selecionar Tema</option>
+            
             <option value="verde">verde - floresta</option>
             <option value="azul">azul - gelo</option>
             <option value="cinza">cinza - montanha</option>
             <option value="vermelho">vermelho - lava</option>
-            <option onclick="backgroundChange()" value="marrom">marrom - terra</option>
+            <option value="marrom">marrom - terra</option>
         </select>
 
     </div>
@@ -39,43 +39,6 @@
 
             <div class="lista-box">
                 <ul class="lista-tarefas">
-                    <!-- <li class="tarefas">
-                        <button class="check">
-                            <i class="bi bi-check2"></i>
-                        </button> -->
-                        <!-- <button class="check">
-                            <i class="bi bi-check2"></i>
-                        </button>
-                        <div class="texto-tarefa">
-                            <p>
-                                Placeholder
-                            </p>
-
-                        </div>
-
-                        <div class="icons">
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-trash"></i>
-                        </div>
-                    </li>
-                    <li class="tarefas">
-                        <button class="check">
-                            <i class="bi bi-check2"></i>
-                        </button>
-                        <div class="texto-tarefa">
-
-                            <p>
-                                Placeholder
-                            </p>
-
-                        </div>
-                        <div class="icons">
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-trash"></i>
-                        </div>
-                    </li>
- -->
-
                 </ul>
             </div>
             

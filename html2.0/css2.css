@@ -9,7 +9,38 @@
     --floresta-cor-botoes-lista: #a38159;
     --floresta-cor-texto: #d6c4a6;
     --floresta-cor-barra-progresso-vazia: #898a87;
-    --floresta-cor-barra-progresso-cheia: ;
+
+    --gelo-cor-caixa: #4895ab;
+    --gelo-cor-input: #346f87;
+    --gelo-cor-itens-lista: #7cb9c8;
+    --gelo-cor-botao-adicionar: #2b4b5e;
+    --gelo-cor-botoes-lista: #205a7c;
+    --gelo-cor-texto: #24292d;
+    --gelo-cor-barra-progresso-vazia: #a5cbd5;
+
+    --terra-cor-caixa: ;
+    --terra-cor-input: ;
+    --terra-cor-itens-lista: ;
+    --terra-cor-botao-adicionar: ;
+    --terra-cor-botoes-lista: ;
+    --terra-cor-texto: ;
+    --terra-cor-barra-progresso-vazia: ;
+
+    --lava-cor-caixa: #330d0f;
+    --lava-cor-input: #460d0c;
+    --lava-cor-itens-lista: #2f0d0f;
+    --lava-cor-botao-adicionar: #72110b;
+    --lava-cor-botoes-lista: #8c1811;
+    --lava-cor-texto: #fab86b;
+    --lava-cor-barra-progresso-vazia: #8c5c54;
+
+    --montanha-cor-caixa: #2c2b34;
+    --montanha-cor-input: #898a87;
+    --montanha-cor-itens-lista: #7f8394;
+    --montanha-cor-botao-adicionar: #595f68;
+    --montanha-cor-botoes-lista: #abb4b8;
+    --montanha-cor-texto: #000000;
+    --montanha-cor-barra-progresso-vazia: #787e8c;
 
 }
 
@@ -71,6 +102,7 @@ div.box{
     width: 45%;
     /* scroll-behavior: smooth; */
     /* border: 1px solid black; */
+    color: var(--floresta-cor-texto);
     box-shadow: 0rem .25rem .3125rem black;
 }
 
@@ -92,6 +124,7 @@ div.box{
     /* margin-bottom: 1
     .25rem; */
     background-color: var(--floresta-cor-input);
+    color: var(--floresta-cor-texto);
     border: 1px solid black;
     /* margin-right: 100px; */
     width: 70%;

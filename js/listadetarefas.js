@@ -1,8 +1,12 @@
 const button = document.querySelector(".botao")
-const input = document.querySelector(".selecionar")
 const listaCompleta = document.querySelector('.lista-tarefas')
 const contato = document.querySelector(".contato-box")
 const body = document.querySelector("body")
+const select = document.querySelector("#select")
+const caixa = document.querySelector(".box")
+const input = document.querySelector(".selecionar")
+const botao = document.querySelector(".botao")
+const h1 = document.querySelector("h1")
 
 let arraylista = []
 
@@ -137,8 +141,59 @@ function fechacontato(){
 }
 
 function backgroundChange(){
-    body.style.backgroundImage = "url(../imagensfundo/terra fundo.jpeg)"
-}
+    if(select.value == "azul"){
+        body.style.backgroundImage = "url('../imagensfundo/gelo fundo.jpeg')";
+        caixa.style.backgroundColor = "var(--gelo-cor-caixa)";
+        input.style.color = "var(--gelo-cor-texto)";
+        input.style.backgroundColor = "var(--gelo-cor-input)";
+        botao.style.backgroundColor = "var(--gelo-cor-botao-adicionar)";
+        botao.style.color = "var(--gelo-cor-botoes-lista)";
+        h1.style.color = "var(--gelo-cor-texto)";
+    } else{
+        if(select.value == "vermelho"){
+            body.style.backgroundImage = "url('../imagensfundo/lava fundo.jpeg')"
+            caixa.style.backgroundColor = "var(--lava-cor-caixa)"
+            input.style.color = "var(--lava-cor-texto)"
+            input.style.backgroundColor = "var(--lava-cor-input)"
+            botao.style.backgroundColor = "var(--lava-cor-botao-adicionar)"
+            botao.style.color = "var(--lava-cor-botoes-lista)"
+            h1.style.color = "var(--lava-cor-texto)"
 
+        } else{
+            if(select.value == "cinza"){
+                body.style.backgroundImage = "url('../imagensfundo/montanha-fundo.jpeg')"
+                caixa.style.backgroundColor = "var(--montanha-cor-caixa)"
+                input.style.color = "var(--montanha-cor-texto)"
+                input.style.backgroundColor = "var(--montanha-cor-input)"
+                botao.style.backgroundColor = "var(--montanha-cor-botao-adicionar)"
+                botao.style.color = "var(--montanha-cor-botoes-lista)"
+                h1.style.color = "var(--montanha-cor-texto)"
+
+            } else{
+                if(select.value == "marrom"){
+                    body.style.backgroundImage = "url('../imagensfundo/terra fundo.jpeg')"
+                    caixa.style.backgroundColor = "var(--terra-cor-caixa)"
+                    input.style.color = "var(--terra-cor-texto)"
+                    input.style.backgroundColor = "var(--terra-cor-input)"
+                    botao.style.backgroundColor = "var(--terra-cor-botao-adicionar)"
+                    botao.style.color = "var(--terra-cor-botoes-lista)"
+                    h1.style.color = "var(--terra-cor-texto)"
+
+                } else{
+                    if(select.value == "verde" || select.value == "selecionar"){
+                        body.style.backgroundImage = "url('../imagensfundo/pexels-taryn-elliott-4840134.jpg')"
+                        caixa.style.backgroundColor = "var(--floresta-cor-caixa)"
+                        input.style.color = "var(--floresta-cor-texto)"
+                        input.style.backgroundColor = "var(--floresta-cor-input)"
+                        botao.style.backgroundColor = "var(--floresta-cor-botao-adicionar)"
+                        botao.style.color = "var(--floresta-cor-botoes-lista)"
+                        h1.style.color = "var(--floresta-cor-texto)"
+
+                    }
+                }
+            }
+        }
+    }
+}
 
 button.addEventListener('click', inputvalor)
