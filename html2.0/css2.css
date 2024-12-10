@@ -251,18 +251,20 @@ div.box{
 
 .contato .foto-place{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: burlywood;
     height: 100%;
     width: 20%;
+
 
 }
 
 .foto-place .fotomateus{
     height: 4.6875rem;
     width: 4.6875rem;
-    background-image: url(/Trabalho-Final-DW1/imagensfundo/89a97461-87dd-43e5-97e7-b51997da12c7\ \(1\).jpeg);
+    background-image: url(../imagensfundo/89a97461-87dd-43e5-97e7-b51997da12c7\ \(1\).jpeg);
     background-position: center;
     background-size: cover;
     border-radius: 100%;
@@ -277,12 +279,15 @@ div.box{
 }
 
 .contato .infos{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     font-size: .9375rem;
-    /* padding: .1875rem; */
     height: 100%;
     width: 60%;
     background-color: bisque;
-
+    
 }
 
 .contato .redes{
@@ -312,3 +317,9 @@ div.box{
     background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
+
+#chat-no-zap{
+    height: 35px;
+    margin-left: .3125rem;
+}
+

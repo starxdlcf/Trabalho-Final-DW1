@@ -2,7 +2,7 @@ const button = document.querySelector(".botao")
 const input = document.querySelector(".selecionar")
 const listaCompleta = document.querySelector('.lista-tarefas')
 const contato = document.querySelector(".contato-box")
-const corpo = document.querySelector("body")
+const body = document.querySelector("body")
 
 let arraylista = []
 
@@ -128,14 +128,16 @@ document.addEventListener('keydown',(event) =>{
 
 function abrirContato(){
     contato.style.display = "flex"
-    
-    
-
+    contato.style.color = "blue"
 }
 
 function fechacontato(){
     contato.style.display = 'none'
     
+}
+
+function backgroundChange(){
+    body.style.backgroundImage = "url(../imagensfundo/terra fundo.jpeg)"
 }
 
 
