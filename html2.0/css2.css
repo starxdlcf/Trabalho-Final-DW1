@@ -12,7 +12,7 @@
 
     --gelo-cor-caixa: #4895ab;
     --gelo-cor-input: #346f87;
-    --gelo-cor-itens-lista: #7cb9c8;
+    --gelo-cor-itens-lista: #72abba;
     --gelo-cor-botao-adicionar: #2b4b5e;
     --gelo-cor-botoes-lista: #205a7c;
     --gelo-cor-texto: #24292d;
@@ -160,13 +160,14 @@ div.box{
     /* justify-content: space-between; */
     list-style: none;
     margin-bottom: 1.25rem;
-    background-color: aliceblue;
+    background-color: var(--floresta-cor-itens-lista);
     /* padding: .3125rem; */
     font-size: x-large;
     padding: .625rem;
     box-shadow: 0rem .25rem .625rem rgb(0, 0, 0);
     width: 100%;
     border-radius:.375rem ;
+
     
 }
 
@@ -223,11 +224,24 @@ div.box{
 
 .edit-input{
     display: flex;
-    font-size: x-large;
+    align-items: center;
+    font-size: 1.2rem;
     outline: none;
     border: none;
     width:100%;
+    /* background-color: var(--gelo-cor-itens-lista); */
 
+}
+
+.check{
+    border-radius: 0.5rem;
+    
+}
+
+.texto-tarefa{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
 }
 
 
