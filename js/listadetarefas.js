@@ -42,7 +42,7 @@ function mostrartarefas() {
         </div>
 
         <div class="icons">
-            <i class="bi bi-pencil-square" onclick="editartarefa(${posição})"></i>
+            <i class="bi bi-pencil-square" cursor="pointer" onclick="editartarefa(${posição})"></i>
             <i class="bi bi-trash" onclick = "deletaritem(${posição})" ></i>
         </div>
     </li>
@@ -78,7 +78,6 @@ function editartarefa(posição) {
     
     textoTarefaDiv.innerHTML = `
         <input type="text" value="" class="edit-input">`;
-
 
     const inputElement = textoTarefaDiv.querySelector('.edit-input');
     inputElement.addEventListener('keyup', (event) => {
@@ -128,7 +127,6 @@ document.addEventListener('keydown',(event) =>{
 
 function abrirContato(){
     contato.style.display = "flex"
-    
     
 
 }
