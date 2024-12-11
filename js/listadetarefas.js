@@ -7,6 +7,7 @@ const caixa = document.querySelector(".box")
 const input = document.querySelector(".selecionar")
 const botao = document.querySelector(".botao")
 const h1 = document.querySelector("h1")
+const lista = document.querySelector();
 
 let arraylista = []
 
@@ -149,6 +150,8 @@ function backgroundChange(){
         botao.style.backgroundColor = "var(--gelo-cor-botao-adicionar)";
         botao.style.color = "var(--gelo-cor-botoes-lista)";
         h1.style.color = "var(--gelo-cor-texto)";
+        lista.style.backgroundColor = "blue"
+        
     } else{
         if(select.value == "vermelho"){
             body.style.backgroundImage = "url('../imagensfundo/lava fundo.jpeg')"
