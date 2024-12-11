@@ -9,7 +9,38 @@
     --floresta-cor-botoes-lista: #a38159;
     --floresta-cor-texto: #d6c4a6;
     --floresta-cor-barra-progresso-vazia: #898a87;
-    --floresta-cor-barra-progresso-cheia: ;
+
+    --gelo-cor-caixa: #4895ab;
+    --gelo-cor-input: #346f87;
+    --gelo-cor-itens-lista: #72abba;
+    --gelo-cor-botao-adicionar: #2b4b5e;
+    --gelo-cor-botoes-lista: #205a7c;
+    --gelo-cor-texto: #24292d;
+    --gelo-cor-barra-progresso-vazia: #a5cbd5;
+
+    --terra-cor-caixa: ;
+    --terra-cor-input: ;
+    --terra-cor-itens-lista: ;
+    --terra-cor-botao-adicionar: ;
+    --terra-cor-botoes-lista: ;
+    --terra-cor-texto: ;
+    --terra-cor-barra-progresso-vazia: ;
+
+    --lava-cor-caixa: #330d0f;
+    --lava-cor-input: #460d0c;
+    --lava-cor-itens-lista: #2f0d0f;
+    --lava-cor-botao-adicionar: #72110b;
+    --lava-cor-botoes-lista: #8c1811;
+    --lava-cor-texto: #fab86b;
+    --lava-cor-barra-progresso-vazia: #8c5c54;
+
+    --montanha-cor-caixa: #2c2b34;
+    --montanha-cor-input: #898a87;
+    --montanha-cor-itens-lista: #7f8394;
+    --montanha-cor-botao-adicionar: #595f68;
+    --montanha-cor-botoes-lista: #abb4b8;
+    --montanha-cor-texto: #000000;
+    --montanha-cor-barra-progresso-vazia: #787e8c;
 
 }
 
@@ -71,6 +102,7 @@ div.box{
     width: 45%;
     /* scroll-behavior: smooth; */
     /* border: 1px solid black; */
+    color: var(--floresta-cor-texto);
     box-shadow: 0rem .25rem .3125rem black;
 }
 
@@ -92,6 +124,7 @@ div.box{
     /* margin-bottom: 1
     .25rem; */
     background-color: var(--floresta-cor-input);
+    color: var(--floresta-cor-texto);
     border: 1px solid black;
     /* margin-right: 100px; */
     width: 70%;
@@ -119,21 +152,23 @@ div.box{
     height: 100%;
     justify-content: space-between;
     /* column-gap: 10px; */
-
+    
 }
 .box li{
     display: flex;
-
+    
     /* justify-content: space-between; */
     list-style: none;
     margin-bottom: 1.25rem;
-    background-color: aliceblue;
+    background-color: var(--floresta-cor-itens-lista);
     /* padding: .3125rem; */
     font-size: x-large;
     padding: .625rem;
     box-shadow: 0rem .25rem .625rem rgb(0, 0, 0);
     width: 100%;
     border-radius:.375rem ;
+
+    
 }
 
 .box ul{
@@ -189,11 +224,24 @@ div.box{
 
 .edit-input{
     display: flex;
-    font-size: x-large;
+    align-items: center;
+    font-size: 1.2rem;
     outline: none;
     border: none;
     width:100%;
+    /* background-color: var(--gelo-cor-itens-lista); */
 
+}
+
+.check{
+    border-radius: 0.5rem;
+    
+}
+
+.texto-tarefa{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
 }
 
 
@@ -251,18 +299,20 @@ div.box{
 
 .contato .foto-place{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: burlywood;
     height: 100%;
     width: 20%;
+
 
 }
 
 .foto-place .fotomateus{
     height: 4.6875rem;
     width: 4.6875rem;
-    background-image: url(/Trabalho-Final-DW1/imagensfundo/89a97461-87dd-43e5-97e7-b51997da12c7\ \(1\).jpeg);
+    background-image: url(../imagensfundo/89a97461-87dd-43e5-97e7-b51997da12c7\ \(1\).jpeg);
     background-position: center;
     background-size: cover;
     border-radius: 100%;
@@ -277,12 +327,15 @@ div.box{
 }
 
 .contato .infos{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     font-size: .9375rem;
-    /* padding: .1875rem; */
     height: 100%;
     width: 60%;
     background-color: bisque;
-
+    
 }
 
 .contato .redes{
@@ -312,3 +365,9 @@ div.box{
     background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
+
+#chat-no-zap{
+    height: 35px;
+    margin-left: .3125rem;
+}
+
