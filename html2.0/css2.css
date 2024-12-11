@@ -42,6 +42,15 @@
     --montanha-cor-texto: #000000;
     --montanha-cor-barra-progresso-vazia: #787e8c;
 
+    --terra-cor-caixa: #383030;
+    --terra-cor-input: #5a5252;
+    --terra-cor-itens-lista:#545454;
+    --terra-cor-botao-adiconar: #4a4444;
+    --terra-cor-botoes-lista: #d9a86e;
+    --terra-cor-texto: #ffe8c0;
+    --terra-cor-barra-progresso-vazia:#9a9a9a;
+
+
 }
 
 * {
