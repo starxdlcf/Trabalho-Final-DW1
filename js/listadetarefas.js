@@ -7,7 +7,6 @@ const caixa = document.querySelector(".box")
 const input = document.querySelector(".selecionar")
 const botao = document.querySelector(".botao")
 const h1 = document.querySelector("h1")
-const lista = document.querySelector();
 
 let arraylista = []
 
