@@ -87,7 +87,7 @@ function editartarefa(posição) {
     const textoTarefaDiv = itemElement.querySelector('.texto-tarefa');
     
     textoTarefaDiv.innerHTML = `
-    <input type="text" value="" class="edit-input">`;
+    <input type="text" value="${arraylista[posição].tarefanome}" class="edit-input">`;
     
     const inputElement = textoTarefaDiv.querySelector('.edit-input');
     inputElement.addEventListener('keyup', (event) => {
