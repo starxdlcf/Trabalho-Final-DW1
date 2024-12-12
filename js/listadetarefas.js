@@ -7,7 +7,6 @@ const caixa = document.querySelector(".box")
 const input = document.querySelector(".selecionar")
 const botao = document.querySelector(".botao")
 const h1 = document.querySelector("h1")
-const editInput = document.querySelector("input.edit-input")
 // const tarefas = document.querySelector(".lista-tarefas li.tarefas")
 // const inputTarefa = document.getElementsByClassName('tarefas')
 
@@ -33,8 +32,8 @@ function inputvalor() { //colocar oq a pessoa escreveu no input como objeto (des
 function mostrartarefas() {
     
     let tarefa = ''
-
-
+    
+    
     arraylista.forEach((item, posição) => {
 
         //permite que a gente adicione novos itens sem perder os anteriores
@@ -50,9 +49,9 @@ function mostrartarefas() {
             </p>
 
         </div>
-
+        
         <div class="icons">
-            <i class="bi bi-pencil-square" cursor="pointer" onclick="editartarefa(${posição})"></i>
+        <i class="bi bi-pencil-square" cursor="pointer" onclick="editartarefa(${posição})"></i>
             <i class="bi bi-trash" onclick = "deletaritem(${posição})" ></i>
         </div>
         </li>
@@ -89,7 +88,7 @@ function editartarefa(posição) {
     
     textoTarefaDiv.innerHTML = `
     <input type="text" value="" class="edit-input">`;
-
+    
     const inputElement = textoTarefaDiv.querySelector('.edit-input');
     inputElement.addEventListener('keyup', (event) => {
         if (event.key === 'Enter') {
@@ -109,6 +108,7 @@ function salvartarefa(posição, novovalor) {
     
     // Re-renderiza a lista de tarefas
     
+    
     mostrartarefas();
     
 }
@@ -122,7 +122,7 @@ function atualizarprogresso(){
     
     const barraProgresso = document.querySelector('.progresso');
     barraProgresso.style.width = `${progresso}%`;
-
+    
     const progressoTexto = document.getElementById('progresso-texto');
     progressoTexto.textContent = `Progresso: ${tarefasconcluidas} de ${totaltarefas} (${Math.round(progresso)}%) concluídas`;
     
@@ -141,7 +141,7 @@ document.addEventListener('keydown',(event) =>{
 function abrirContato(){
     contato.style.display = "flex"
     
-
+    
 }
 
 function fechacontato(){
