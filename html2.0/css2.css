@@ -169,7 +169,7 @@ div.box{
     /* justify-content: space-between; */
     list-style: none;
     margin-bottom: 1.25rem;
-    background-color: var(--floresta-cor-itens-lista);
+    /* background-color: var(--floresta-cor-itens-lista); */
     /* padding: .3125rem; */
     font-size: x-large;
     padding: .625rem;
