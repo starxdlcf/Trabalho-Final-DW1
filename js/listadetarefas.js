@@ -7,7 +7,6 @@ const caixa = document.querySelector(".box")
 const input = document.querySelector(".selecionar")
 const botao = document.querySelector(".botao")
 const h1 = document.querySelector("h1")
-const editInput = document.querySelector("input.edit-input")
 // const tarefas = document.querySelector(".lista-tarefas li.tarefas")
 // const inputTarefa = document.getElementsByClassName('tarefas')
 
@@ -33,10 +32,10 @@ function inputvalor() {
 function mostrartarefas() {
     
     let tarefa = ''
-
-
+    
+    
     arraylista.forEach((item, posição) => {
-
+        
         tarefa = tarefa + `
         <li class="tarefas ${item.concluida && "feito"}">
         <button class="check" onclick = "concluirtarefa(${posição})">
@@ -48,15 +47,15 @@ function mostrartarefas() {
             </p>
 
         </div>
-
+        
         <div class="icons">
-            <i class="bi bi-pencil-square" cursor="pointer" onclick="editartarefa(${posição})"></i>
+        <i class="bi bi-pencil-square" cursor="pointer" onclick="editartarefa(${posição})"></i>
             <i class="bi bi-trash" onclick = "deletaritem(${posição})" ></i>
         </div>
         </li>
  `
     })
-
+    
     listaCompleta.innerHTML = tarefa
 }
 
@@ -86,14 +85,14 @@ function editartarefa(posição) {
     
     textoTarefaDiv.innerHTML = `
     <input type="text" value="" class="edit-input">`;
-
+    
     const inputElement = textoTarefaDiv.querySelector('.edit-input');
     inputElement.addEventListener('keyup', (event) => {
         if (event.key === 'Enter') {
             salvartarefa(posição, inputElement.value);
         }
     });
-
+    
     
     // Coloca o foco no campo de entrada
     inputElement.focus();
@@ -106,26 +105,10 @@ function salvartarefa(posição, novovalor) {
     
     // Re-renderiza a lista de tarefas
     
+    
     mostrartarefas();
     
-    if(select.value == "azul"){
-        inputElement.style.backgroundColor = "var(--gelo-cor-itens-lista)"
-    } else{
-        if(select.value == "vermelho"){
-            inputElement.style.backgroundColor = "var(--lava-cor-itens-lista)"
-        }else{
-            if(select.value == "marrom"){
-                inputElement.style.backgroundColor = "var(--terra-cor-itens-lista)"
-            }else{
-                if(select.value == "cinza"){
-                    inputElement.style.backgroundColor = "var(--montanha-cor-itens-lista)"
-                }else{
-                        if(select.value == "verde" || select.value == "selecionar")
-                            inputElement.style.backgroundColor = "var(--floresta-cor-itens-lista)"
-                }
-            }
-        }
-    }
+    
 }
 
 
@@ -137,7 +120,7 @@ function atualizarprogresso(){
     
     const barraProgresso = document.querySelector('.progresso');
     barraProgresso.style.width = `${progresso}%`;
-
+    
     const progressoTexto = document.getElementById('progresso-texto');
     progressoTexto.textContent = `Progresso: ${tarefasconcluidas} de ${totaltarefas} (${Math.round(progresso)}%) concluídas`;
     
@@ -155,7 +138,7 @@ document.addEventListener('keydown',(event) =>{
 function abrirContato(){
     contato.style.display = "flex"
     
-
+    
 }
 
 function fechacontato(){
@@ -173,14 +156,15 @@ function backgroundChange(){
         botao.style.color = "var(--gelo-cor-botoes-lista)";
         h1.style.color = "var(--gelo-cor-texto)";
         editInput.style.backgroundColor = "var(--gelo-cor-itens-lista)"
-        // tarefas.style.backgroundColor = "var(--lava-cor-itens-lista)"
-        // inputTarefa.style.backgroundColor = "var(--lava-cor-itens-lista)"
-        // document.documentElement.style.setProperty('.tarefas', backgroundColor = 'coral');
         const gelo = document.querySelectorAll('.lista-tarefas li.tarefas')
         gelo.forEach(item => {
             item.style.backgroundColor = "var(--gelo-cor-itens-lista)"
         });
-
+        // tarefas.style.backgroundColor = "var(--lava-cor-itens-lista)"
+        // inputTarefa.style.backgroundColor = "var(--lava-cor-itens-lista)"
+        // document.documentElement.style.setProperty('.tarefas', backgroundColor = 'coral');
+        
+        
     } else{
         if(select.value == "vermelho"){
             body.style.backgroundImage = "url('../imagensfundo/lava fundo.jpeg')";
