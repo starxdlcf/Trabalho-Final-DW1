@@ -35,50 +35,52 @@ function mostrartarefas() {
     
     
     arraylista.forEach((item, posição) => {
-
+        
         //permite que a gente adicione novos itens sem perder os anteriores
-
+        
         tarefa = tarefa + `  
         <li class="tarefas ${item.concluida && "feito"}">
         <button class="check" onclick = "concluirtarefa(${posição})">
-            <i class=" check-feito ${item.concluida && "bi bi-check2"}" ></i>
+        <i class=" check-feito ${item.concluida && "bi bi-check2"}" ></i>
         </button>
         <div class="texto-tarefa">
-            <p>
-                ${item.tarefanome}
-            </p>
-
+        <p>
+        ${item.tarefanome}
+        </p>
+        
         </div>
         
         <div class="icons">
         <i class="bi bi-pencil-square" cursor="pointer" onclick="editartarefa(${posição})"></i>
             <i class="bi bi-trash" onclick = "deletaritem(${posição})" ></i>
-        </div>
-        </li>
- `
-    })
+            </div>
+            </li>
+            `
+        })
+        
+        qualcor()
+        
+        listaCompleta.innerHTML = tarefa
+    }
+    
+    function deletaritem(posição) {
+        arraylista.splice(posição, 1)
+        
+        console.log(posição)
+        
+        mostrartarefas()
+        atualizarprogresso()
+    }
+    
+    
+    function concluirtarefa(posição) {
+        arraylista[posição].concluida = !arraylista[posição].concluida
+    
+    mostrartarefas()
+    atualizarprogresso()
+    console.log(posição)
 
     qualcor()
-
-    listaCompleta.innerHTML = tarefa
-}
-
-function deletaritem(posição) {
-    arraylista.splice(posição, 1)
-    
-    console.log(posição)
-    
-    mostrartarefas()
-    atualizarprogresso()
-}
-
-
-function concluirtarefa(posição) {
-    arraylista[posição].concluida = !arraylista[posição].concluida
-    
-    mostrartarefas()
-    atualizarprogresso()
-    console.log(posição)
 }
 
 
@@ -97,7 +99,7 @@ function editartarefa(posição) {
     });
     // Coloca o foco no campo de entrada
     inputElement.focus();
-
+    
     qualcor()
 }
 
@@ -150,60 +152,60 @@ function fechacontato(){
 }
 
 // function backgroundChange(){
-//     if(select.value == "azul"){
-//         body.style.backgroundImage = "url('../imagensfundo/gelo fundo.jpeg')";
-//         caixa.style.backgroundColor = "var(--gelo-cor-caixa)";
-//         caixa.style.color = "var(--gelo-cor-caixa)";
-//         input.style.backgroundColor = "var(--gelo-cor-input)";
-//         botao.style.backgroundColor = "var(--gelo-cor-botao-adicionar)";
-//         botao.style.color = "var(--gelo-cor-botoes-lista)";
-//         h1.style.color = "var(--gelo-cor-texto)";
-//         editInput.style.backgroundColor = "var(--gelo-cor-itens-lista)";
-//         // tarefas.style.backgroundColor = "var(--lava-cor-itens-lista)"
-//         // inputTarefa.style.backgroundColor = "var(--lava-cor-itens-lista)"
-//         // document.documentElement.style.setProperty('.tarefas', backgroundColor = 'coral');
-//         const gelo = document.querySelectorAll('.lista-tarefas li.tarefas')
-//         gelo.forEach(item => {
-//             item.style.backgroundColor = "var(--gelo-cor-itens-lista)";
-//         });
-
-//     } else{
-//         if(select.value == "vermelho"){
-//             body.style.backgroundImage = "url('../imagensfundo/lava fundo.jpeg')";
-//             caixa.style.backgroundColor = "var(--lava-cor-caixa)";
-//             caixa.style.color = "var(--lava-cor-texto)";
-//             input.style.color = "var(--lava-cor-texto)";
-//             input.style.backgroundColor = "var(--lava-cor-input)";
-//             botao.style.backgroundColor = "var(--lava-cor-botao-adicionar)";
+    //     if(select.value == "azul"){
+        //         body.style.backgroundImage = "url('../imagensfundo/gelo fundo.jpeg')";
+        //         caixa.style.backgroundColor = "var(--gelo-cor-caixa)";
+        //         caixa.style.color = "var(--gelo-cor-caixa)";
+        //         input.style.backgroundColor = "var(--gelo-cor-input)";
+        //         botao.style.backgroundColor = "var(--gelo-cor-botao-adicionar)";
+        //         botao.style.color = "var(--gelo-cor-botoes-lista)";
+        //         h1.style.color = "var(--gelo-cor-texto)";
+        //         editInput.style.backgroundColor = "var(--gelo-cor-itens-lista)";
+        //         // tarefas.style.backgroundColor = "var(--lava-cor-itens-lista)"
+        //         // inputTarefa.style.backgroundColor = "var(--lava-cor-itens-lista)"
+        //         // document.documentElement.style.setProperty('.tarefas', backgroundColor = 'coral');
+        //         const gelo = document.querySelectorAll('.lista-tarefas li.tarefas')
+        //         gelo.forEach(item => {
+            //             item.style.backgroundColor = "var(--gelo-cor-itens-lista)";
+            //         });
+            
+            //     } else{
+                //         if(select.value == "vermelho"){
+                    //             body.style.backgroundImage = "url('../imagensfundo/lava fundo.jpeg')";
+                    //             caixa.style.backgroundColor = "var(--lava-cor-caixa)";
+                    //             caixa.style.color = "var(--lava-cor-texto)";
+                    //             input.style.color = "var(--lava-cor-texto)";
+                    //             input.style.backgroundColor = "var(--lava-cor-input)";
+                    //             botao.style.backgroundColor = "var(--lava-cor-botao-adicionar)";
 //             botao.style.color = "var(--lava-cor-botoes-lista)";
 //             h1.style.color = "var(--lava-cor-texto)";
 //             const lava = document.querySelectorAll('.lista-tarefas li.tarefas')
 //             lava.forEach(item => {
-//                 item.style.backgroundColor = "var(--lava-cor-itens-lista)"
-//             });
-            
-//         } else{
-//             if(select.value == "cinza"){
-//                 body.style.backgroundImage = "url('../imagensfundo/montanha-fundo.jpeg')"
-//                 caixa.style.backgroundColor = "var(--montanha-cor-caixa)"
-//                 caixa.style.color = "var(--montanha-cor-input)";
-//                 input.style.color = "var(--montanha-cor-texto)"
-//                 input.style.backgroundColor = "var(--montanha-cor-input)"
-//                 botao.style.backgroundColor = "var(--montanha-cor-botao-adicionar)"
-//                 botao.style.color = "var(--montanha-cor-botoes-lista)"
-//                 h1.style.color = "var(--montanha-cor-texto)"
-//                 const montanha = document.querySelectorAll('.lista-tarefas li.tarefas')
-//                 montanha.forEach(item => {
-//                     item.style.backgroundColor = "var(--montanha-cor-itens-lista)"
-//                 });
+    //                 item.style.backgroundColor = "var(--lava-cor-itens-lista)"
+    //             });
+    
+    //         } else{
+        //             if(select.value == "cinza"){
+            //                 body.style.backgroundImage = "url('../imagensfundo/montanha-fundo.jpeg')"
+            //                 caixa.style.backgroundColor = "var(--montanha-cor-caixa)"
+            //                 caixa.style.color = "var(--montanha-cor-input)";
+            //                 input.style.color = "var(--montanha-cor-texto)"
+            //                 input.style.backgroundColor = "var(--montanha-cor-input)"
+            //                 botao.style.backgroundColor = "var(--montanha-cor-botao-adicionar)"
+            //                 botao.style.color = "var(--montanha-cor-botoes-lista)"
+            //                 h1.style.color = "var(--montanha-cor-texto)"
+            //                 const montanha = document.querySelectorAll('.lista-tarefas li.tarefas')
+            //                 montanha.forEach(item => {
+                //                     item.style.backgroundColor = "var(--montanha-cor-itens-lista)"
+                //                 });
                 
-//             } else{
-//                 if(select.value == "marrom"){
-//                     body.style.backgroundImage = "url('../imagensfundo/terra fundo.jpeg')"
-//                     caixa.style.backgroundColor = "var(--terra-cor-caixa)"
-//                     caixa.style.color = "var(--terra-cor-texto)";
-//                     input.style.color = "var(--terra-cor-texto)"
-//                     input.style.backgroundColor = "var(--terra-cor-input)"
+                //             } else{
+                    //                 if(select.value == "marrom"){
+                        //                     body.style.backgroundImage = "url('../imagensfundo/terra fundo.jpeg')"
+                        //                     caixa.style.backgroundColor = "var(--terra-cor-caixa)"
+                        //                     caixa.style.color = "var(--terra-cor-texto)";
+                        //                     input.style.color = "var(--terra-cor-texto)"
+                        //                     input.style.backgroundColor = "var(--terra-cor-input)"
 //                     botao.style.backgroundColor = "var(--terra-cor-botao-adicionar)"
 //                     botao.style.color = "var(--terra-cor-botoes-lista)"
 //                     h1.style.color = "var(--terra-cor-texto)"
@@ -211,23 +213,23 @@ function fechacontato(){
 //                     terra.forEach(item => {
 //                         item.style.backgroundColor = "var(--terra-cor-itens-lista)"
 //                     });
-                    
+
 //                 } else{
-//                     if(select.value == "verde" || select.value == "selecionar"){
-//                         body.style.backgroundImage = "url('../imagensfundo/pexels-taryn-elliott-4840134.jpg')"
-//                         caixa.style.backgroundColor = "var(--floresta-cor-caixa)"
-//                         caixa.style.color = "var(--floresta-cor-texto)";
-//                         input.style.color = "var(--floresta-cor-texto)"
-//                         input.style.backgroundColor = "var(--floresta-cor-input)"
-//                         botao.style.backgroundColor = "var(--floresta-cor-botao-adicionar)"
-//                         botao.style.color = "var(--floresta-cor-botoes-lista)"
-//                         h1.style.color = "var(--floresta-cor-texto)"
-//                         const floresta = document.querySelectorAll('.lista-tarefas li.tarefas')
-//                         editInput.style.backgroundColor = "var(--gelo-cor-itens-lista)"
-//                         floresta.forEach(item => {
-//                             item.style.backgroundColor = "var(--floresta-cor-itens-lista)"
+    //                     if(select.value == "verde" || select.value == "selecionar"){
+        //                         body.style.backgroundImage = "url('../imagensfundo/pexels-taryn-elliott-4840134.jpg')"
+        //                         caixa.style.backgroundColor = "var(--floresta-cor-caixa)"
+        //                         caixa.style.color = "var(--floresta-cor-texto)";
+        //                         input.style.color = "var(--floresta-cor-texto)"
+        //                         input.style.backgroundColor = "var(--floresta-cor-input)"
+        //                         botao.style.backgroundColor = "var(--floresta-cor-botao-adicionar)"
+        //                         botao.style.color = "var(--floresta-cor-botoes-lista)"
+        //                         h1.style.color = "var(--floresta-cor-texto)"
+        //                         const floresta = document.querySelectorAll('.lista-tarefas li.tarefas')
+        //                         editInput.style.backgroundColor = "var(--gelo-cor-itens-lista)"
+        //                         floresta.forEach(item => {
+            //                             item.style.backgroundColor = "var(--floresta-cor-itens-lista)"
 //                         });
-                        
+
 //                     }
 //                 }
 //             }
